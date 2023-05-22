@@ -7,7 +7,7 @@ LIBRARY_DIR = -L $(RAYLIB_DIR)/lib
 DEFINES = -D _DEFAULT_SOURCE -D RAYLIB_BUILD_MODE=$(BUILD_MODE) -D $(PLATFORM) -D _CRT_SECURE_NO_DEPRECATE
 
 ifeq ($(PLATFORM),PLATFORM_DESKTOP)
-    CC = clang++
+    CC = "C:\Program Files\LLVM\bin\clang++.exe"
     EXT = .exe
     ifeq ($(BUILD_MODE),RELEASE)
         CFLAGS ?= $(DEFINES) -ffast-math -march=native -D NDEBUG -O3  $(INCLUDE_DIR) $(LIBRARY_DIR)
